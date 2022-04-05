@@ -11,7 +11,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
       <div className="flex justify-between items-center space-x-5 w-screen">
         <Link to="/">
           <p className="text-2xl bg-blue-500 font-bold text-white py-1 px-2 rounded-full">
-            Google
+            Search-App
           </p>
         </Link>
         <button

@@ -1,14 +1,20 @@
 import React from 'react'
-import {Routes, Route, Navigate} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
+import { Results } from './Results'
 
 export const Links = () => {
   return (
-    <div>
-      <Routes>
-        <Route  path='/'/>
-
-        <Navigate to ="/Seach"/>
-      </Routes>
+    <div className='p-4'>
+      
+      <Switch>
+      <Route exact path="/">
+    <Redirect to="/Search"/>
+</Route>
+<Route exact path={['/search', '/images', '/news', '/ videos']}>
+<Results />
+</Route>
+      </Switch>
+     
     </div>
   )
 }
