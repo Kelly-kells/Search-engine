@@ -1,5 +1,5 @@
 import React from 'react'
-import Loader, { Puff } from 'react-loader-spinner'
+import * as Loader from "react-loader-spinner";
 
 export const Load = () => {
   return (
@@ -8,3 +8,4 @@ export const Load = () => {
     </div>
   )
 }
+

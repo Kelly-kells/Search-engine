@@ -1,5 +1,5 @@
 import React,{useContext, useEffect} from 'react'
-import {uselocation} from 'react-router-dom'
+import {useLocation} from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import { useResultContext} from './contexts/ResultContextProvider'
 import { Load } from './Load'
@@ -7,15 +7,34 @@ import { Load } from './Load'
 export const Results = () => {
   const{ getResults, results, loading, searchTerm, setSearchTerm}=useResultContext();
 
-  const location=uselocation();
+  const location=useLocation();
+  useEffect(() => {
+    getResults('/seach/q=javascript mastery&num=40')
+  },[])
+  
 
   if (loading) return <Load />
-   console.log=(location.pathname)
+  
     switch (location.pathname) {
       case '/search':
         
-        return 'Search'
-    
+        return (
+          <div className='flex flex-wrap justify-between space-y-6 sm:-56'>
+             
+
+          </div>
+        )
+      
+        case '/images':
+        
+          return 'IMAGES';
+          case '/news':
+        
+            return 'NEWS';
+
+            case '/videos':
+        
+              return 'VIDEOS';
       default:
         return 'error';
     }

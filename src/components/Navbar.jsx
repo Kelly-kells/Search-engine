@@ -10,8 +10,8 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
     >
       <div className="flex justify-between items-center space-x-5 w-screen">
         <Link to="/">
-          <p className="text-2xl bg-blue-500 font-bold text-white py-1 px-2 rounded-full">
-            Search-App
+          <p className="text-2xl bg-gray-400 font-bold text-white py-1 px-2 rounded-full">
+            SACH
           </p>
         </Link>
         <button
